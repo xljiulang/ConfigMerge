@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+<appSettings>
+  <add key="useLocalIPAdress" value="false"/>
+
+  <!--通过节点的key属性来合并value-->
+  <?merge by="key" attr="value"?>   
+  <add key="localIPAdress" value="192.168.1.99" />
+
+  <!--通过节点的key属性来合并所有属性-->
+  <?merge by="key"?>
+  <add key="useProxy" value="true" />
+</appSettings>
+
+<!--通过节点名称来合并account,password,sex,age-->
+<?merge attr="account,password,sex,age" ?>
+<admin account="admin" password="123456" sex="男" age="18" enable="true" />
+
+  <!--通过节点名称来合并所有属性-->
+  <?merge?>
+  <subadmin account="subadmin" password="123456" sex="男" age="18" enable="true" />
+
+  <!--通过节点名称来合并所有属性-->
+  <?merge?>
+  <guest account="guest" password="123456" sex="男" age="18" enable="true" />
+
+</configuration>

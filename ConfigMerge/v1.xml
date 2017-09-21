@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <appSettings>
+    <add key="localIPAdress" value="10.0.0.1" />
+  </appSettings>
+
+  <!--管理员配置-->
+  <admin account="admin" password="password" sex="女" age="20" enable="true" />
+
+  <!--子管理-->
+  <subadmin account="subadmin" password="password" />
+</configuration>
